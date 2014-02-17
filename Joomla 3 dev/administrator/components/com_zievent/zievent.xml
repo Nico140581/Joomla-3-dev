@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_ZIEVENT</name>
+	<creationDate>2014-02-17</creationDate>
+	<author>Nicolas Deslandes</author>
+	<authorEmail>ndeslandes@hotmail.com</authorEmail>
+	<authorUrl>http://www.nomansland.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>1.0.0</version>
+	<description>COM_ZIEVENT_DESCRIPTION</description>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.mysql.sql</file>
+		</sql>
+	</install>
+
+	<files folder="site">
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>languages</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>zievent.php</filename>
+		<filename>router.php</filename>
+	</files>
+
+	<scriptfile>install.php</scriptfile>
+
+	<languages folder="site">
+		<language tag="fr-FR">languages/fr-FR/fr-FR.com_zievent.ini
+		</language>
+	</languages>
+
+	<administration>
+		<menu link="option=com_zievent"
+			img="components/com_zievent/assets/images/zievent_icon.png">COM_LENDR</menu>
+		<submenu>
+			<menu view="settings"
+				img="components/com_zievent/assets/images/settings_icon.png" alt="ZIEVENT/Settings">COM_ZIEVENT_SETTINGS
+			</menu>
+		</submenu>
+
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>languages</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>zievent.php</filename>
+			<filename>index.html</filename>
+			<filename>install.mysql.sql</filename>
+		</files>
+
+		<languages folder="admin">
+			<language tag="fr-FR">languages/fr-FR/fr-FR.com_zievent.ini
+			</language>
+			<language tag="fr-FR">languages/fr-FR/fr-FR.com_zievent.sys.ini
+			</language>
+		</languages>
+
+	</administration>
+
+</extension>
